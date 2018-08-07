@@ -1,9 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 def fibonacci(n):
-    a,b=1,1
-    for i in range(n):
-        a,b=b,a+b
-    return a
+    if n < 2:
+        return 1
+    return fibonacci(n-2) + fibonacci(n-1)
 
 numero=int(input("Calcolo n-esimo numero di Fibonacci: "))
-print "F(%d)=%d" % (numero, fibonacci(numero))
+print("F(%d)=%d" % (numero, fibonacci(numero)))
